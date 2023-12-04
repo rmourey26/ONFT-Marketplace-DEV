@@ -176,7 +176,7 @@ export const NFTCard = ({ card, loading, chainId, isMyWallet }: any) => {
                                         className="m-checkbox__input"
                                         value={"on"}
                                         checked={isSelected}
-                                        onChange={() => {}}
+                                        onChange={() => { }}
                                     />
                                 </CheckBox>
                             </div>

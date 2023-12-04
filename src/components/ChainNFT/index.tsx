@@ -169,7 +169,7 @@ export const ChainNFT = ({ chainType, walletAddress, active }: any) => {
             if (
                 chainCards[0].info.version !== 2 ||
                 chainCards[0].info.token_address !==
-                    chainCards[1].info.token_address
+                chainCards[1].info.token_address
             ) {
                 NotificationManager.warning(
                     "Not all of these collections support batch traversing."
@@ -227,9 +227,8 @@ export const ChainNFT = ({ chainType, walletAddress, active }: any) => {
 
     return (
         <Wrapper
-            className={`${
-                !active || (cards && !(cards as any).length) ? "hidden" : ""
-            } relative`}
+            className={`${!active || (cards && !(cards as any).length) ? "hidden" : ""
+                } relative`}
         >
             <SubstractSVG
                 className="substractSVG"
@@ -271,22 +270,22 @@ export const ChainNFT = ({ chainType, walletAddress, active }: any) => {
             <NFTWrapper className="flex gap-8 flex-wrap">
                 {!cards
                     ? new Array(5)
-                          .fill(10)
-                          .map((card: any, index: number) => (
-                              <NFTCard
-                                  key={`card${index}`}
-                                  card={card}
-                                  loading={true}
-                              />
-                          ))
+                        .fill(10)
+                        .map((card: any, index: number) => (
+                            <NFTCard
+                                key={`card${index}`}
+                                card={card}
+                                loading={true}
+                            />
+                        ))
                     : getSearchCards().map((card: any, index: number) => (
-                          <NFTCard
-                              key={`card${index}`}
-                              card={card}
-                              chainId={chainType}
-                              isMyWallet={isMyWallet}
-                          />
-                      ))}
+                        <NFTCard
+                            key={`card${index}`}
+                            card={card}
+                            chainId={chainType}
+                            isMyWallet={isMyWallet}
+                        />
+                    ))}
             </NFTWrapper>
 
             {isMyWallet && (
